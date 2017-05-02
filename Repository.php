@@ -13,8 +13,8 @@
      function createRepository(){
 
 
-         $s1 = Array($this->firstNameKey => 'Moti', $this->lastNameKey => 'Bartov', $this->idKey => '031992654', $this->imageKey => 'moti');
-         $s2 = Array($this->firstNameKey => 'Donald', $this->lastNameKey => 'Trump', $this->idKey => '555', $this->imageKey => 'trump');
+         $s1 = Array($this->firstNameKey => 'Moti', $this->lastNameKey => 'Bartov', $this->idKey => '031992654', $this->imageKey => 'moti.jpg');
+         $s2 = Array($this->firstNameKey => 'Donald', $this->lastNameKey => 'Trump', $this->idKey => '555', $this->imageKey => 'trump.jpg');
          
          $this->repo = Array($s1, $s2);
      }
