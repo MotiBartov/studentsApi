@@ -129,7 +129,7 @@ abstract class ApiKernel
             405 => 'Method Not Allowed',
             500 => 'Internal Server Error',
         ); 
-        return ($status[$code])?$status[$code]:$status[500]; 
+        return ($status[$code]) ? $status[$code] : $status[500]; 
     }
 } 
 ?>

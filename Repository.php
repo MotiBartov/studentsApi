@@ -19,7 +19,7 @@
          $this->repo = Array($s1, $s2);
      }
 
-     function getRepo(){
+     function getStudents(){
      	return $this->repo;
      }
 

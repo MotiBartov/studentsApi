@@ -28,21 +28,20 @@ class ApiEngine extends ApiKernel
     }
 
      /**
-     * Example of an Endpoint
+     * student endpoint
      */
      protected function student($args) {
 
         if ($this->method == 'GET') {
-        	if(isset($_GET['id'])){
-         //	echo 'student endpoint '.$_GET['id'];
-                //return json_encode(array('firstname' => 'moti', 'lastname' => 'bartov', 'id' => '031992654'));
-
-                return json_encode($this->repository->getRepo()[intval($_GET['id'])]);
-    	    }else{
-    	    	$student1 = array('firstname' => 'moti', 'lastname' => 'bartov', 'id' => '031992654');
-    	    	$student2 = array('firstname' => 'Donald', 'lastname' => 'Trump', 'id' => '55555555');
-
-               return '{results:'.json_encode($this->repository->getRepo()).'}';
+        	if(isset($_GET['id'])){ //Getting a student from the repository
+                $id = intval($_GET['id']);
+                if( !is_numeric($id) || $id > ( count($this->repository->getStudents()) - 1)){
+                    return '';
+                }else{
+                    return json_encode($this->repository->getStudents()[ $id ]);
+                }
+    	    }else{  //Getting all students in the repository
+               return '{results:'.json_encode($this->repository->getStudents()).'}';
      	    }
         } else {
             return "Only accepts GET requests";
