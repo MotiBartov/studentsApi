@@ -14,8 +14,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "http://10.0.0.7:80/studentsApi/";
-    public static final String IMAGES_BASE_URL = "http://10.0.0.7:80/studentsApi/images/";
+    private static final String HOST_NAME = "10.100.10.30:4000";
+
+    private static final String BASE_URL = "http://10.100.10.30:8080/";
+    public static final String IMAGES_BASE_URL = "http://10.100.10.30:8080/images/";
     private static Retrofit retrofit = null;
 
 
